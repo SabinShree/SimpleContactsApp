@@ -1,0 +1,48 @@
+.text-field {
+    -fx-background-image: url("/sample/Search24.gif");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: right center;
+    -fx-text-fill: darkblue;
+    -fx-font-size: 16;
+}
+
+.tool-bar .button {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+.table-view .label {
+    -fx-background-color: #ffffef;
+}
+
+.menu-bar{
+    -fx-background-color: #d4f4f4;
+    -fx-text-fill: blue;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+.menu-bar .label:hover , .menu-bar .label{
+    -fx-background-color: #d4f4f4;
+    -fx-text-fill: black;
+}
+
+.menu-bar .menu .menu-item .label{
+    -fx-background-color: white;
+    -fx-text-fill: darkblue;
+}
+.tool-bar{
+    -fx-background-color: #f4f4f4;
+
+}
+
+.tool-bar .label{
+    -fx-background-color: #f4f4f4;
+
+}
+
+.hyperlink{
+    -fx-text-fill: #6d7993;
+}
+
+.hyperlink:visited{
+    -fx-border-style: none;
+}

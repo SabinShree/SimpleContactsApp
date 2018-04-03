@@ -1,0 +1,102 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane fx:id="borderPane" fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml" stylesheets="/sample/style.css">
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="File">
+                    <MenuItem text="Add..." onAction="#showDialogPane"/>
+                    <MenuItem text="Edit" onAction="#editContacts"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="Exit"/>
+                </Menu>
+            </MenuBar>
+            <HBox>
+                <ToolBar>
+                    <Button text="New Contacts" onAction="#showDialogPane">
+                        <graphic>
+                            <ImageView>
+                                <Image url="@/sample/New16.gif"/>
+                            </ImageView>
+                        </graphic>
+                        <tooltip>
+                            <Tooltip text="Add a new items from here..."/>
+                        </tooltip>
+                    </Button>
+                    <TextField promptText="Search by phone number..." prefWidth="220" fx:id="searchPhoneNumber"
+                               onKeyPressed="#searchIt">
+
+                    </TextField>
+                    <Button text="Search" prefWidth="120" onAction="#searchIt">
+                    </Button>
+                    <Separator>
+                    </Separator>
+                    <Separator>
+                    </Separator>
+                    <Label text=" " fx:id="dateTimeLabel" style="-fx-font-size: 22; -fx-text-fill: green;">
+                    </Label>
+                </ToolBar>
+            </HBox>
+            <Label id="labelMy"
+                   style="-fx-font-weight: bold; -fx-font-family: 'Fira Code';   -fx-background-color: #10a1a1;
+    -fx-text-fill: #6a811b;  -fx-font-size: 26"
+                   text="My ContactBox " prefWidth="Infinity">
+                <padding>
+                    <Insets left="330"/>
+                </padding>
+            </Label>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="tableView" onKeyPressed="#deleteContact">
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+            <columns>
+                <TableColumn style="-fx-font-size: 17" prefWidth="195" text="First Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="firstName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn style="-fx-font-size: 17" prefWidth="195" text="Last Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="lastName"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn style="-fx-font-size: 17" prefWidth="185" text="Phone Number">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="phoneNumber"/>
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn style="-fx-font-size: 17" prefWidth="275" text="Address">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="addresses"/>
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <HBox>
+            <Label text="Designed and developed by : "
+                   style=" -fx-font-size: 22; -fx-text-fill: darkolivegreen; -fx-font-family: 'Fira Code'; -fx-font-weight: bold; -fx-background-color: none; ">
+                <HBox.margin>
+                    <Insets left="328"/>
+                </HBox.margin>
+
+            </Label>
+            <Hyperlink text="Sabin Kharel"
+                       style="-fx-font-size: 22; -fx-text-fill: #123456; -fx-font-weight: bold;  -fx-font-family : 'Yu Gothic'"
+                       underline="true" onAction="#getLink">
+            </Hyperlink>
+        </HBox>
+    </bottom>
+
+</BorderPane>

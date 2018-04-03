@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.GridPane?>
+<DialogPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.AddnewContactsController"
+            prefHeight="270.0" prefWidth="500.0">
+    <header>
+        <Label text="Enter your contacts details here and notes too."/>
+    </header>
+    <content>
+        <GridPane vgap="10" hgap="10">
+            <Label text="First Name : " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField prefWidth="270" fx:id="firstNameField" promptText="Enter a first name here..."
+                       GridPane.rowIndex="0"
+                       GridPane.columnIndex="1"/>
+            <Label text="Last Name : " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="lastNameField" promptText="Enter a last name here..." GridPane.rowIndex="1"
+                       GridPane.columnIndex="1"/>
+            <Label prefWidth="190" text="Phone number : " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="phoneNumberField" promptText="Enter a phone number here..." GridPane.rowIndex="2"
+                       GridPane.columnIndex="1"/>
+            <Label text="Address : " GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="addressField" promptText="Enter a address here..." GridPane.rowIndex="3"
+                       GridPane.columnIndex="1"/>
+        </GridPane>
+    </content>
+</DialogPane>
