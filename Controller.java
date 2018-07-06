@@ -287,7 +287,7 @@ public class Controller {
     @FXML
     public void getLink() {
         try {
-            Desktop.getDesktop().browse(new URI("https://www.facebook.com/sabin.kharel.18"));
+            Desktop.getDesktop().browse(new URI("https://www.facebook.com"));
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("Error while loading your default browser.");
